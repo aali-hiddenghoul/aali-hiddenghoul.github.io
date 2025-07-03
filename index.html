@@ -1,112 +1,200 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet" />
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Times New Roman", serif;
-        color: rgb(0, 0, 0);
-        background-color: rgba(0, 0, 0, 0);
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Times New Roman", serif;
+            color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0);
+            display: flex;
+            flex-direction: column;
+        }
 
-      .main-container {
-        color: rgb(46, 46, 46);
-        min-height: 0px;
-        position: relative;
-        text-align: left;
-        pointer-events: auto;
-        padding: 20px 20px 0;
-        font:
-          700 64px "Bebas Neue",
-          sans-serif;
-      }
+        .coming-soon-section {
+            position: relative;
+            height: auto;
+            text-align: center;
+            letter-spacing: 10px;
+            color: rgba(46, 46, 46, 1);
+            font:
+                600 64px "Bebas Neue",
+                sans-serif;
+        }
 
-      .content-section {
-        display: flex;
-        align-items: center;
-        font-weight: 700;
-        justify-content: space-between;
-        max-width: 1200px;
-        min-height: 26px;
-        position: relative;
-        width: 100%;
-        pointer-events: auto;
-        height: auto;
-        flex-grow: 0;
-        margin: 0 auto;
-        padding: 20px;
-      }
+        .social-media-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 60px;
+            width: 75%;
+            margin: 0 auto;
+        }
 
-      .logo-image {
-        display: block;
-        aspect-ratio: 0.6 / 1;
-        font-weight: 700;
-        max-width: 91px;
-        min-height: 20px;
-        min-width: 20px;
-        object-fit: cover;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        width: 100%;
-        pointer-events: auto;
-        margin: 0 10px 0 20px;
-      }
+        .social-media-wrapper {
+            width: 25%;
+            flex-grow: 1;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
 
-      .title-text {
-        flex-grow: 1;
-        line-height: 60px;
-      }
+        .social-icons-row {
+            gap: 20px;
+            display: flex;
+        }
 
-      .nav-buttons {
-        display: flex;
-        align-items: center;
-      }
+        .social-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 33%;
+            margin-left: 0px;
+        }
 
-      .nav-button {
-        background: rgba(0, 0, 0, 0);
-        color: rgba(46, 46, 46, 1);
-        font:
-          700 24px Montserrat,
-          sans-serif;
-        padding: 12px 24px;
-        cursor: pointer;
-        transition-duration: 0.3s;
-        pointer-events: auto;
-      }
+        .social-column:nth-child(2),
+        .social-column:nth-child(3) {
+            margin-left: 20px;
+        }
 
-      .nav-button.company {
-        border-color: rgba(0, 0, 0, 0);
-        overflow-x: hidden;
-        overflow-y: hidden;
-      }
+        .social-icon {
+            object-fit: contain;
+            object-position: center;
+            width: 100%;
+            min-height: 20px;
+            min-width: 20px;
+            overflow: hidden;
+        }
 
-      .nav-button.games {
-        border-color: rgba(0, 0, 0, 0);
-      }
+        .social-icon.clickable {
+            cursor: pointer;
+            pointer-events: auto;
+        }
 
-      .nav-button.contact {
-        border-color: rgba(0, 0, 0, 0);
-      }
+        .social-icon.first {
+            aspect-ratio: 20;
+        }
 
-      .nav-button:hover {
-        background-color: rgba(46, 46, 46, 1);
-        color: white;
-      }
+        .social-icon.second,
+        .social-icon.third {
+            aspect-ratio: 200;
+            width: auto;
+        }
+
+        @media (max-width: 991px) {
+            .social-icons-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0px;
+            }
+
+            .social-column {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .social-column:nth-child(2),
+            .social-column:nth-child(3) {
+                margin-left: 0;
+            }
+        }
+
+        .main-container {
+            color: rgb(46, 46, 46);
+            min-height: 0px;
+            position: relative;
+            text-align: left;
+            pointer-events: auto;
+            padding: 20px 20px 0;
+            font:
+                700 64px "Bebas Neue",
+                sans-serif;
+        }
+
+        .content-section {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            justify-content: space-between;
+            max-width: 1200px;
+            min-height: 26px;
+            position: relative;
+            width: 100%;
+            pointer-events: auto;
+            height: auto;
+            flex-grow: 0;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo-image {
+            display: block;
+            aspect-ratio: 0.6 / 1;
+            font-weight: 700;
+            max-width: 91px;
+            min-height: 20px;
+            min-width: 20px;
+            object-fit: cover;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            width: 100%;
+            pointer-events: auto;
+            margin: 0 10px 0 20px;
+        }
+
+        .title-text {
+            flex-grow: 1;
+            line-height: 60px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-button {
+            background: rgba(0, 0, 0, 0);
+            color: rgba(46, 46, 46, 1);
+            font:
+                700 24px Montserrat,
+                sans-serif;
+            padding: 12px 24px;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            pointer-events: auto;
+        }
+
+        .nav-button.company {
+            border-color: rgba(0, 0, 0, 0);
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .nav-button.games {
+            border-color: rgba(0, 0, 0, 0);
+        }
+
+        .nav-button.contact {
+            border-color: rgba(0, 0, 0, 0);
+        }
+
+        .nav-button:hover {
+            background-color: rgba(46, 46, 46, 1);
+            color: white;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="main-container">
-      <section class="content-section">
-        <img
-          class="logo-image"
-          loading="lazy"
-          srcset="
+        <section class="content-section">
+            <img class="logo-image" loading="lazy" srcset="
             https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=100   100w,
             https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=200   200w,
             https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=400   400w,
@@ -115,21 +203,66 @@
             https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=1600 1600w,
             https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=2000 2000w,
             https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73
-          "
-          src="https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73"
-          alt="Hidden Ghoul Logo"
-        />
-        <div class="title-text">
-          <span>HIDDEN </span>
-          <br style="display: inline; font-weight: 700; pointer-events: auto" />
-          <span>GHOUL</span>
-        </div>
-        <nav class="nav-buttons">
-          <button class="nav-button company">COMPANY</button>
-          <button class="nav-button games">GAMES</button>
-          <button class="nav-button contact">CONTACT</button>
-        </nav>
-      </section>
+          " src="https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73"
+                alt="Hidden Ghoul Logo" />
+            <div class="title-text">
+                <span>HIDDEN </span>
+                <br style="display: inline; font-weight: 700; pointer-events: auto" />
+                <span>GHOUL</span>
+            </div>
+            <nav class="nav-buttons">
+                <button class="nav-button company">COMPANY</button>
+                <button class="nav-button games">GAMES</button>
+                <button class="nav-button contact">CONTACT</button>
+            </nav>
+        </section>
     </div>
-  </body>
+    <div class="coming-soon-section">Coming Soon</div>
+    <div class="social-media-container">
+        <div class="social-media-wrapper">
+            <div class="social-icons-row">
+                <div class="social-column">
+                    <img class="social-icon first clickable" loading="lazy" srcset="
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fef08879e6114438d8622ceab978408af?width=100   100w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fef08879e6114438d8622ceab978408af?width=200   200w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fef08879e6114438d8622ceab978408af?width=400   400w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fef08879e6114438d8622ceab978408af?width=800   800w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fef08879e6114438d8622ceab978408af?width=1200 1200w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fef08879e6114438d8622ceab978408af?width=1600 1600w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fef08879e6114438d8622ceab978408af?width=2000 2000w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fef08879e6114438d8622ceab978408af
+              " src="https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fef08879e6114438d8622ceab978408af"
+                        alt="Social Media Icon 1" />
+                </div>
+                <div class="social-column">
+                    <img class="social-icon second" loading="lazy" srcset="
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fac91d0bc4d8f4bb7ba6bb68b0dc91d84?width=100   100w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fac91d0bc4d8f4bb7ba6bb68b0dc91d84?width=200   200w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fac91d0bc4d8f4bb7ba6bb68b0dc91d84?width=400   400w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fac91d0bc4d8f4bb7ba6bb68b0dc91d84?width=800   800w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fac91d0bc4d8f4bb7ba6bb68b0dc91d84?width=1200 1200w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fac91d0bc4d8f4bb7ba6bb68b0dc91d84?width=1600 1600w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fac91d0bc4d8f4bb7ba6bb68b0dc91d84?width=2000 2000w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fac91d0bc4d8f4bb7ba6bb68b0dc91d84
+              " src="https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fac91d0bc4d8f4bb7ba6bb68b0dc91d84"
+                        alt="Social Media Icon 2" />
+                </div>
+                <div class="social-column">
+                    <img class="social-icon third clickable" loading="lazy" srcset="
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2F6df2601144054446b6df6d729976004b?width=100   100w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2F6df2601144054446b6df6d729976004b?width=200   200w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2F6df2601144054446b6df6d729976004b?width=400   400w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2F6df2601144054446b6df6d729976004b?width=800   800w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2F6df2601144054446b6df6d729976004b?width=1200 1200w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2F6df2601144054446b6df6d729976004b?width=1600 1600w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2F6df2601144054446b6df6d729976004b?width=2000 2000w,
+                https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2F6df2601144054446b6df6d729976004b
+              " src="https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2F6df2601144054446b6df6d729976004b"
+                        alt="Social Media Icon 3" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

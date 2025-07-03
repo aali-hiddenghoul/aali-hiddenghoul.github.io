@@ -1,105 +1,135 @@
 <!doctype html>
 <html>
-
-<head>
+  <head>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&family=Montserrat:wght@400;700&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Times New Roman", serif;
-            color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0);
-        }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Times New Roman", serif;
+        color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0);
+      }
 
-        .main-container {
-            pointer-events: auto;
-            color: rgba(46, 46, 46, 1);
-            text-align: left;
-            width: auto;
-            position: relative;
-            min-height: 100px;
-            padding: 20px;
-            font:
-                700 64px "Bebas Neue",
-                sans-serif;
-        }
+      .main-container {
+        color: rgb(46, 46, 46);
+        min-height: 0px;
+        position: relative;
+        text-align: left;
+        pointer-events: auto;
+        padding: 20px 20px 0;
+        font:
+          700 64px "Bebas Neue",
+          sans-serif;
+      }
 
-        .content-section {
-            pointer-events: auto;
-            color: rgba(46, 46, 46, 1);
-            text-align: left;
-            width: 100%;
-            position: relative;
-            min-height: 100px;
-            padding: 20px;
-            font:
-                700 64px "Bebas Neue",
-                sans-serif;
-            max-width: 1200px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            margin-left: auto;
-            margin-right: auto;
-        }
+      .content-section {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        justify-content: space-between;
+        max-width: 1200px;
+        min-height: 26px;
+        position: relative;
+        width: 100%;
+        pointer-events: auto;
+        height: auto;
+        flex-grow: 0;
+        margin: 0 auto;
+        padding: 20px;
+      }
 
-        .title-text {
-            flex-grow: 1;
-        }
+      .logo-image {
+        display: block;
+        aspect-ratio: 0.6 / 1;
+        font-weight: 700;
+        max-width: 91px;
+        min-height: 20px;
+        min-width: 20px;
+        object-fit: cover;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 100%;
+        pointer-events: auto;
+        margin: 0 10px 0 20px;
+      }
 
-        .nav-buttons {
-            display: flex;
-            align-items: center;
-        }
+      .title-text {
+        flex-grow: 1;
+        line-height: 60px;
+      }
 
-        .nav-button {
-            background: rgba(0, 0, 0, 0);
-            color: rgba(46, 46, 46, 1);
-            font:
-                700 24px Montserrat,
-                sans-serif;
-            padding: 12px 24px;
-            cursor: pointer;
-            transition-duration: 0.3s;
-            pointer-events: auto;
-        }
+      .nav-buttons {
+        display: flex;
+        align-items: center;
+      }
 
-        .nav-button.company {
-            border-color: rgba(0, 0, 0, 0);
-            overflow-x: hidden;
-            overflow-y: hidden;
-        }
+      .nav-button {
+        background: rgba(0, 0, 0, 0);
+        color: rgba(46, 46, 46, 1);
+        font:
+          700 24px Montserrat,
+          sans-serif;
+        padding: 12px 24px;
+        cursor: pointer;
+        transition-duration: 0.3s;
+        pointer-events: auto;
+      }
 
-        .nav-button.games {
-            border-color: rgba(0, 0, 0, 0);
-        }
+      .nav-button.company {
+        border-color: rgba(0, 0, 0, 0);
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
 
-        .nav-button.contact {
-            border: 1px none rgb(46, 46, 46);
-        }
+      .nav-button.games {
+        border-color: rgba(0, 0, 0, 0);
+      }
 
-        .nav-button:hover {
-            background-color: rgba(46, 46, 46, 1);
-            color: white;
-        }
+      .nav-button.contact {
+        border-color: rgba(0, 0, 0, 0);
+      }
+
+      .nav-button:hover {
+        background-color: rgba(46, 46, 46, 1);
+        color: white;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main-container">
-        <section class="content-section">
-            <div class="title-text">HIDDEN GHOUL</div>
-            <nav class="nav-buttons">
-                <button class="nav-button company">COMPANY</button>
-                <button class="nav-button games">GAMES</button>
-                <button class="nav-button contact">CONTACT</button>
-            </nav>
-        </section>
+      <section class="content-section">
+        <img
+          class="logo-image"
+          loading="lazy"
+          srcset="
+            https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=100   100w,
+            https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=200   200w,
+            https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=400   400w,
+            https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Fracaf771a43e14e20b150ae1c13402d73?width=800  800w,
+            https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=1200 1200w,
+            https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=1600 1600w,
+            https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73?width=2000 2000w,
+            https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73
+          "
+          src="https://cdn.builder.io/api/v1/image/assets%2F47da41edf14841e4a9c7bfadde034999%2Facaf771a43e14e20b150ae1c13402d73"
+          alt="Hidden Ghoul Logo"
+        />
+        <div class="title-text">
+          <span>HIDDEN </span>
+          <br style="display: inline; font-weight: 700; pointer-events: auto" />
+          <span>GHOUL</span>
+        </div>
+        <nav class="nav-buttons">
+          <button class="nav-button company">COMPANY</button>
+          <button class="nav-button games">GAMES</button>
+          <button class="nav-button contact">CONTACT</button>
+        </nav>
+      </section>
     </div>
-</body>
-
+  </body>
 </html>

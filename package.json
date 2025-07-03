@@ -1,0 +1,20 @@
+{
+  "name": "hiddenghoul-website",
+  "version": "1.0.0",
+  "description": "Hidden Ghoul static website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000",
+    "build": "echo 'Static site - no build step needed'"
+  },
+  "keywords": [
+    "static-site",
+    "github-pages"
+  ],
+  "author": "Hidden Ghoul",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}

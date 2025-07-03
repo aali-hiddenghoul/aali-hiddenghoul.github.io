@@ -1,9 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Times New Roman", serif;
+            color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .main-container {
+            pointer-events: auto;
+            color: rgba(46, 46, 46, 1);
+            text-align: left;
+            width: auto;
+            position: relative;
+            min-height: 100px;
+            padding: 20px;
+            font:
+                700 64px "Bebas Neue",
+                sans-serif;
+        }
+
+        .content-section {
+            pointer-events: auto;
+            color: rgba(46, 46, 46, 1);
+            text-align: left;
+            width: 100%;
+            position: relative;
+            min-height: 100px;
+            padding: 20px;
+            font:
+                700 64px "Bebas Neue",
+                sans-serif;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .title-text {
+            flex-grow: 1;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-button {
+            background: rgba(0, 0, 0, 0);
+            color: rgba(46, 46, 46, 1);
+            font:
+                700 24px Montserrat,
+                sans-serif;
+            padding: 12px 24px;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            pointer-events: auto;
+        }
+
+        .nav-button.company {
+            border-color: rgba(0, 0, 0, 0);
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .nav-button.games {
+            border-color: rgba(0, 0, 0, 0);
+        }
+
+        .nav-button.contact {
+            border: 1px none rgb(46, 46, 46);
+        }
+
+        .nav-button:hover {
+            background-color: rgba(46, 46, 46, 1);
+            color: white;
+        }
+    </style>
+</head>
+
 <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+    <div class="main-container">
+        <section class="content-section">
+            <div class="title-text">HIDDEN GHOUL</div>
+            <nav class="nav-buttons">
+                <button class="nav-button company">COMPANY</button>
+                <button class="nav-button games">GAMES</button>
+                <button class="nav-button contact">CONTACT</button>
+            </nav>
+        </section>
+    </div>
 </body>
 
 </html>
